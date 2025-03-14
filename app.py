@@ -15,7 +15,7 @@ sia = SentimentIntensityAnalyzer()
 
 # 🔥 Ensure API key is set correctly
 try:
-    genai.configure(api_key=api_key)
+    genai.configure(api_key=st.secrets["api_key"])
 except Exception as e:
     st.error(f"❌ Error setting up Google Gemini API: {str(e)}")
 

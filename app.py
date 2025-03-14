@@ -1,5 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
+from apikey import api_key
 import requests
 import re
 import nltk
@@ -15,7 +16,7 @@ def setup_nltk():
 sia = setup_nltk()
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyCplwq1K1UtHf__H1hEuzbU5Pq4SYNBmzU")
+genai.configure(api_key=api_key)
 
 # Precompile bias words for faster regex matching
 BIAS_WORDS = ["shocking", "disaster", "corrupt", "manipulative", "scandal", "biased", "fake", "propaganda"]

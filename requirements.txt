@@ -4,4 +4,4 @@ nltk
 matplotlib
 numpy
 requests
-protobuf==3.20.*
+protobuf
